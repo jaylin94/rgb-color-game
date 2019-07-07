@@ -131,7 +131,7 @@ function adjustBlock() {
 }
 
 //Set initial jumbotron color and all color blocks
-setRGB(jumbotron, 1);
+//setRGB(jumbotron, 1);
 setRGB(colorBlockAll, 1);
 setAnswerBlock(difficulty);
 $(".hard").fadeOut(1);
@@ -146,7 +146,7 @@ for (var i = 0; i < colorBlockAll.length; i++) {
 $(newColorBtn).click(function () {
     setRGB(colorBlockAll, 1);
     setRGB(newColorBtn, 2);
-    setRGB(jumbotron, 1);
+    //setRGB(jumbotron, 1);
     setAnswerBlock(difficulty);
 
     if (difficulty === 3){
