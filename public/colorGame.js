@@ -134,7 +134,7 @@ function adjustBlock() {
 setRGB(jumbotron, 1);
 setRGB(colorBlockAll, 1);
 setAnswerBlock(difficulty);
-$(".hard").fadeOut();
+$(".hard").fadeOut(1);
 
 //Adds event listener for click for all color blocks
 for (var i = 0; i < colorBlockAll.length; i++) {
