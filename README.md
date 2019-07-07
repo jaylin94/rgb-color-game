@@ -1,6 +1,6 @@
 # RGB Color Game
 
-A simple, RGB color game built with HTML5, CSS3, Bootstrap4, JavaScript, EJS, Express, Node.js, and jQuery. The app randomly generates an RGB value shown in the header, and the user must select the color block that corresponds to the RGB values. The RGB Color Game is hosted on heroku and can be found here: [RGB Color Game](https://jaylin94-rgb-color-game.herokuapp.com/) - Hosted on Heroku
+A simple, RGB color game built with HTML5, CSS3, Bootstrap4, JavaScript, EJS, Express, Node.js, and jQuery. The app randomly generates an RGB value shown in the header, and the user must select the color block that corresponds to the RGB values. The RGB Color Game is hosted on Heroku and can be found here: [RGB Color Game](https://jaylin94-rgb-color-game.herokuapp.com/) - Hosted on Heroku
 
 ## Getting Started
 
