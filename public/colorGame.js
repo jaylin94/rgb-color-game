@@ -35,24 +35,26 @@ function generateRandomColorBlock(option) {
     return answerBlock;
 }
 
+function setAnswerBlock(option) {
+  //Selects block as the answer block based on difficulty range
+  if (option === 1){
+    selectedBlock = generateRandomColorBlock(3) - 1;
+  }
+  else if (option === 2){
+    selectedBlock = generateRandomColorBlock(2) - 1;
+  }
+  else if (option === 3){
+    selectedBlock = generateRandomColorBlock(1) - 1;
+  }
+}
+
 //Sets the RGB background colors. Takes an element and integers as arguments.
 //Element's background color is changed, integer determines option used.
 //Second integer determines difficulty and where the answer block is located.
-function setRGB(element, option, option2) {
+function setRGB(element, option) {
     var rVal;
     var gVal;
     var bVal;
-
-    //Selects block as the answer block based on difficulty range
-    if (option2 === 1){
-      selectedBlock = generateRandomColorBlock(3) - 1;
-    }
-    else if (option2 === 2){
-      selectedBlock = generateRandomColorBlock(2) - 1;
-    }
-    else if (option2 === 3){
-      selectedBlock = generateRandomColorBlock(1) - 1;
-    }
 
     if (option === 1) {
         for (var i = 0; i < element.length; i++) {
@@ -98,7 +100,8 @@ function adjustBlock() {
         $(this).animate({ margin: "1.1%" }, 600);
 
         setTimeout(function () {
-          setRGB(colorBlockAll, 1, difficulty);
+          setRGB(colorBlockAll, 1);
+          setAnswerBlock(difficulty);
         }, 3000);
 
         //Resets colors to new random colors
@@ -128,8 +131,9 @@ function adjustBlock() {
 }
 
 //Set initial jumbotron color and all color blocks
-setRGB(jumbotron, 1, difficulty);
-setRGB(colorBlockAll, 1, difficulty);
+setRGB(jumbotron, 1);
+setRGB(colorBlockAll, 1);
+setAnswerBlock(difficulty);
 $(".hard").fadeOut(500);
 
 //Adds event listener for click for all color blocks
@@ -140,8 +144,10 @@ for (var i = 0; i < colorBlockAll.length; i++) {
 //Adds click functionality to the new color button, setting a new background color
 //for the button and generates new colors for all color blocks
 $(newColorBtn).click(function () {
-    setRGB(colorBlockAll, 1, difficulty);
-    setRGB(newColorBtn, 2, difficulty);
+    setRGB(colorBlockAll, 1);
+    setRGB(newColorBtn, 2);
+    setRGB(jumbotron, 2);
+    setAnswerBlock(difficulty);
 
     if (difficulty === 3){
       for (var i = 0; i < colorBlockAll.length; i++) {
@@ -170,7 +176,8 @@ $("#hardOption").on("click", function() {
   $(colorBlockEasy).fadeIn(1000);
 
   //Set new colors for all with answer block in range
-  setRGB(colorBlockAll, 1, difficulty);
+  setRGB(colorBlockAll, 1);
+  setAnswerBlock(difficulty);
 
   //Change classes for dropdown menu
   $("#hardOption").addClass("active");
@@ -185,7 +192,8 @@ $("#mediumOption").on("click", function() {
   $(colorBlockMedium).fadeIn(1000);
 
   //Set new colors for all with answer block in range
-  setRGB(colorBlockAll, 1, difficulty);
+  setRGB(colorBlockAll, 1);
+  setAnswerBlock(difficulty);
 
   //Change classes for dropdown menu
   $("#hardOption").removeClass("active");
@@ -202,7 +210,8 @@ $("#easyOption").on("click", function() {
   $(colorBlockEasy).fadeIn(1000);
 
   //Set new colors for all with answer block in range
-  setRGB(colorBlockEasy, 1, difficulty);
+  setRGB(colorBlockEasy, 1);
+  setAnswerBlock(difficulty);
 
   //Change classes for dropdown menu
   $("#hardOption").removeClass("active");
