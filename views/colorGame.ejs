@@ -3,18 +3,21 @@
     <div class="container">
 
         <div class="jumbotron text-light">
-            <h1>The Great RGB Color Game!
+            <h1><span id="title">The RGB Color Game</span>
                 <div>
+                  <span id="rgbVals">
                     (<span id="letterR">R</span><span id="jumboR"> 255</span> |
                     <span id="letterG">G</span><span id="jumboG"> 255</span> |
                     <span id="letterB">B</span><span id="jumboB"> 255</span>)
+                    </span>
                 </div>
             </h1>
-            <h3>
+            <h3 id="author">
                 By Jay Lin
             </h3>
         </div>
 
+        <!-- NavBar -->
         <nav class="nav navbar-nav navbar-light navbar-expand-md">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,7 +26,55 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="mr-auto navbar-nav">
                     <li class="nav-item active">
-                        <button id="newColors" class="nav-link btn text-light">New Colors</button>
+                        <button id="newColors" class="nav-link btn-sm text-light">New Colors</button>
+                    </li>
+                    <li class="nav-item">
+                      <!-- Button trigger modal -->
+                      <button type="button" class="how-to btn-sm text-light" data-toggle="modal" data-target="#exampleModal">
+                        How-To-Play
+                      </button>
+
+                      <!-- Modal -->
+                      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">How-To-Play:</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              An "RGB" color is created by combining the colors Red, Green, and Blue together. These three colors can
+                              create every single color imaginable!
+                              <div>
+                                <ol>
+                                  <li>
+                                    To play, find out which color block is created by the numbers in the
+                                    header.
+                                  </li>
+                                  <li>
+                                    R represents the strength of Red, G represents the strength of Green, and B represents the strength of Blue.
+                                  </li>
+                                  <li>
+                                    The greater the value for R, G, or B, the stronger the influence it has on the final color created.
+                                  </li>
+                                  <li>
+                                    Click the color blocks to select your choice!
+                                    Incorrect block selections will automatically fade out.
+                                  </li>
+                                </ol>
+                              </div>
+                              <div>
+                                Example: (R 255, G 0, B 0) represents a very strong Red.
+                              </div>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </li>
                 </ul>
                 <ul class="ml-auto navbar-nav">

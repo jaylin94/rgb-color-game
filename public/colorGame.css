@@ -1,3 +1,7 @@
+.btn-sm {
+  margin: 2px;
+}
+
 .jumbotron {
     text-align: center;
     text-shadow: 0px 3px 10px darkgrey;
@@ -9,6 +13,8 @@
 .container {
     background-color: white;
     margin: auto;
+    padding: auto;
+    min-width: 475px;
 }
 
 .colorBlock {
@@ -21,9 +27,19 @@
     margin: 1.1% 1.1%;
 }
 
+.how-to {
+    border: 1px outset white;
+    background-color: lightblue;
+}
+
+#title {
+  font-weight: 700;
+  font-size: 150%;
+}
+
 #newColors {
     background-color: pink;
-    border: 1px solid white;
+    border: 1px outset white;
 }
 
 #letterR {
