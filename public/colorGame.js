@@ -145,7 +145,7 @@ for (var i = 0; i < colorBlockAll.length; i++) {
 //for the button and generates new colors for all color blocks
 $(newColorBtn).click(function () {
     setRGB(colorBlockAll, 1);
-    setRGB(newColorBtn, 2);
+    //setRGB(newColorBtn, 2);
     //setRGB(jumbotron, 1);
     setAnswerBlock(difficulty);
 
