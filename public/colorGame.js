@@ -63,9 +63,9 @@ function setRGB(element, option) {
             bVal = generateRandomRGB();
             //If selected block RGB is set, also set title values for user to guess
             if (selectedBlock === i) {
-                jumbotronR.textContent = rVal;
-                jumbotronG.textContent = gVal;
-                jumbotronB.textContent = bVal;
+                jumbotronR.textContent = " " + rVal;
+                jumbotronG.textContent = " " + gVal;
+                jumbotronB.textContent = " " + bVal;
                 answerR = rVal;
                 answerG = gVal;
                 answerB = bVal;
