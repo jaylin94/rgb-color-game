@@ -146,7 +146,7 @@ for (var i = 0; i < colorBlockAll.length; i++) {
 $(newColorBtn).click(function () {
     setRGB(colorBlockAll, 1);
     setRGB(newColorBtn, 2);
-    setRGB(jumbotron, 2);
+    setRGB(jumbotron, 1);
     setAnswerBlock(difficulty);
 
     if (difficulty === 3){
