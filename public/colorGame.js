@@ -210,7 +210,7 @@ $("#easyOption").on("click", function() {
   $(colorBlockEasy).fadeIn(1000);
 
   //Set new colors for all with answer block in range
-  setRGB(colorBlockEasy, 1);
+  setRGB(colorBlockAll, 1);
   setAnswerBlock(difficulty);
 
   //Change classes for dropdown menu
