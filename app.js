@@ -11,4 +11,4 @@ app.get("/", function(req, res){
   res.render("colorGame");
 });
 
-app.listen(process.env.PORT, process.env.IP);
+app.listen(8080, process.env.IP);
