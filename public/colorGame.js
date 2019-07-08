@@ -176,8 +176,8 @@ $("#hardOption").on("click", function() {
   $(colorBlockEasy).fadeIn(1000);
 
   //Set new colors for all with answer block in range
-  setRGB(colorBlockAll, 1);
   setAnswerBlock(difficulty);
+  setRGB(colorBlockAll, 1);
 
   //Change classes for dropdown menu
   $("#hardOption").addClass("active");
@@ -192,8 +192,8 @@ $("#mediumOption").on("click", function() {
   $(colorBlockMedium).fadeIn(1000);
 
   //Set new colors for all with answer block in range
-  setRGB(colorBlockAll, 1);
   setAnswerBlock(difficulty);
+  setRGB(colorBlockAll, 1);
 
   //Change classes for dropdown menu
   $("#hardOption").removeClass("active");
@@ -210,8 +210,8 @@ $("#easyOption").on("click", function() {
   $(colorBlockEasy).fadeIn(1000);
 
   //Set new colors for all with answer block in range
-  setRGB(colorBlockAll, 1);
   setAnswerBlock(difficulty);
+  setRGB(colorBlockAll, 1);
 
   //Change classes for dropdown menu
   $("#hardOption").removeClass("active");
