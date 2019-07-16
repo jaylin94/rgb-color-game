@@ -135,6 +135,7 @@ function adjustBlock() {
 setRGB(colorBlockAll, 1);
 setAnswerBlock(difficulty);
 $(".hard").fadeOut(1);
+$(colorBlockAll).addClass("shadow");
 
 //Adds event listener for click for all color blocks
 for (var i = 0; i < colorBlockAll.length; i++) {
